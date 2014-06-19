@@ -29,7 +29,7 @@
 var pics, title, price, currency;
 etsyitems.results.forEach( function (a) {
     pics = '<img src=' + a.Images[0].url_170x135 + ' />' + '<br />';
-    title = a.title + " " + '<br />';
+    title = '<span class="truncate">' + a.title + '</span>' + " " + '<br />';
     price = a.price + " ";
     currency = a.currency_code + '<br /><br />';
     $('.container').append('<div class="box">' + pics + title + price + currency + '</div>');
