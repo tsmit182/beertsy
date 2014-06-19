@@ -25,11 +25,12 @@
 // });
 
 
+
 var pics, title, price, currency;
 etsyitems.results.forEach( function (a) {
     pics = '<img src=' + a.Images[0].url_170x135 + ' />' + '<br />';
     title = a.title;
     price = a.price;
     currency = a.currency_code + '<br /><br />';
-    $('.container').append(pics, title, price, currency);
+    $('.container').append('<div class="box">' + pics + title + price + currency + '</div>');
 });
