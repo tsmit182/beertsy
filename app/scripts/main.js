@@ -29,8 +29,19 @@
 var pics, title, price, currency;
 etsyitems.results.forEach( function (a) {
     pics = '<img src=' + a.Images[0].url_170x135 + ' />' + '<br />';
-    title = a.title;
-    price = a.price;
+    title = a.title + " " + '<br />';
+    price = a.price + " ";
     currency = a.currency_code + '<br /><br />';
     $('.container').append('<div class="box">' + pics + title + price + currency + '</div>');
 });
+
+    // if(title.length > 25) {
+    //       $link.title(title.substring(0, 21) + "...");
+    //    }
+
+//so I tried this:
+// changing "title" as follows:
+//    title = a.title.substring(0,21) + "...");
+// which removed everything... so i tried adding the following:
+//     title = title.substring(0,21) + "...");
+// which also removed everything.
